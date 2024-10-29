@@ -1,1 +1,23 @@
-只是一个简单的主页。然而，随着越来越多的小伙伴发现了这个项目，它受到了大量本不应有的关注。而且，此项目作为初学前端的作品，其代码相当杂乱且质量低下。此外，该项目还遭到众多不明资源站或下载站的倒卖，致使许多不明真相的购买者从源代码中找到本人的联系方式进行问题咨询或提出功能需求。但由于目前个人生活方面的原因，且本人未曾从此项目获取任何收益，所以已无力维护此项目。该仓库不会存档，会积极接受各位大佬的 PR，不过不会针对任何新功能或 Bug 做出更新，敬请谅解！
+# This file is generated from information provided by the datasource.  Changes
+# to it will not persist across an instance reboot.  To disable cloud-init's
+# network configuration capabilities, write a file
+# /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg with the following:
+# network: {config: disabled}
+auto lo
+iface lo inet loopback
+    dns-nameservers 223.5.5.5 223.6.6.6 2400:3200::1
+
+auto eth0
+iface eth0 inet static
+    address 112.29.210.101/24
+    gateway 112.29.210.1
+
+auto eth0:1
+iface eth0:1 inet static
+    address 112.29.210.228/24
+    gateway 112.29.210.1
+    
+# control-alias eth0
+iface eth0 inet6 static
+    address 2409:8c30:1000:1b00:6::25e/112
+    gateway 2409:8c30:1000:1b00:6::1
